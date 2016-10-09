@@ -8,8 +8,8 @@ var speedPer = 100,
 	backSpeed = 1,
 	num = 0,
 	status = 0,
-	time = 3000,
-	defaultTime = 3000,
+	time = 2000,
+	defaultTime = 2000,
 	setTime,
 	lastStep = 0,
 	lastPercent = 0,
@@ -182,7 +182,7 @@ function tryAgain() {
 	people.reset();
 	$('#layer_btn_hide').removeClass('btn_hide_hover');
 	$('#layer_btn_run').removeClass('btn_run_hover');
-	time = 3000;
+	time = 2000;
 	showTime();
 	background.init();
 	status = 0;
