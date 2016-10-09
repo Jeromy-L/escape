@@ -1,19 +1,68 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Stick Hero</title>
-    </head>
-    <body>
-        <style type="text/css">
-            .main {
-                width: 500px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        </style>
-        <div class="main">
-            <canvas class="canvas" height="500" width="500" style="border:1px solid black"></canvas>
-        </div>
-
-        <script type="text/javascript" src="public/js/renderer.js"></script>
-    </body>
+<head>
+	<title>帮助三饭快炒小哥逃避城管</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></meta>
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="wrapper_back">
+			<div id="wrapper_back_pic">
+				<div class="back_pic"></div>
+				<div id="alert7" class="alert"></div>
+				<div id="alert14" class="alert"></div>
+				<div id="alert17" class="alert"></div>
+				<div id="alert" class="alert"></div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div id="wrapper_people" class="img people"></div>
+		<div id="die">
+			<div id="die_people" class="die"></div>
+			<div id="die_people1" class="die"></div>
+			<div id="die_people2" class="die"></div>
+			<div id="die_people3" class="die"></div>
+		</div>
+		<div id="die_cloud" class="die"></div>
+		<audio id="people_punchcombo" src="punchcombo.mp3"></audio>
+		<audio id="people_scream" src="scream.mp3"></audio>
+	</div>
+	<div id="layer">
+		<div id="layer_time">
+			<p>思考时间</p>
+			<span id="layer_time_num">3</span>秒
+		</div>
+		<div id="layer_btn">
+			<a id="layer_btn_hide" class="img"></a>
+			<a id="layer_btn_run" class="img"></a>
+		</div>
+	</div>
+	<div id="rule">
+		<div id="rule_text"></div>
+		<div id="rule_go" class="img"></div>
+	</div>
+	<div id="result">
+		<div id="result_wrapper">
+			<div id="result_wrapper_text">
+					<img src="how.png" id="how">
+				你跑了
+				<span id="num">7</span>
+				格
+				<div id="result1">辣鸡，进去里面蹲着吧</div>
+			</div>
+			<div id="result_wrapper_btn">
+				<a id="share" class="img"></a>
+				<a id="again" class="img"></a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">created by 华工创维俱乐部</div>
+	<audio src="bgm1.mp3" autoplay="autoplay"  loop="loop" hidden="true"></audio>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
 </html>
