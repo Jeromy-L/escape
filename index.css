@@ -514,7 +514,7 @@ html, body {
         font-weight: bold; }
     #result #result_wrapper #result_wrapper_btn {
       text-align: center; }
-      #result #result_wrapper #result_wrapper_btn #share {
+      #result #result_wrapper #result_wrapper_btn #join {
         display: inline-block;
         width: 135px;
         height: 57px;
@@ -536,6 +536,12 @@ html, body {
   text-align: center;
   font-size: 1em;
   font-weight: bold; }
+
+#share {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .back_pic {
@@ -561,6 +567,13 @@ html, body {
 
   .alert {
     background-image: url("note.png");
-    -webkit-background-size: 600px 100px; } }
+    -webkit-background-size: 600px 100px; }
+
+  #share {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 224px;
+    height: 106px; } }
 
 /*# sourceMappingURL=index.css.map */

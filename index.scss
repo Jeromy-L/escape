@@ -478,7 +478,7 @@ html, body {
 		}
 		#result_wrapper_btn {
 				text-align: center;
-				#share{
+				#join{
 					display: inline-block;
 					width: 135px;
 					height: 57px;
@@ -505,6 +505,12 @@ html, body {
 	text-align: center;
 	font-size: 1em; 
 	font-weight: bold;
+}
+#share{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
 {
@@ -534,6 +540,13 @@ html, body {
         background-image:url('note.png');
         -webkit-background-size: 600px 100px;
     }
+    #share{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 224px;
+		height: 106px;
+	}
 }
 
 

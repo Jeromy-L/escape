@@ -140,6 +140,25 @@ function resetTime() {
 	timeCount();
 }
 
+function changeTitle(string){
+    var u = navigator.userAgent;
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    document.title = string;
+    if (isiOS) {
+        var body = document.getElementsByTagName('body')[0];
+        
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "loading.png");
+        iframe.addEventListener('load', function() {
+        setTimeout(function() {
+          iframe.removeEventListener('load', function(){});
+            document.body.removeChild(iframe);
+          }, 0);
+        });
+        document.body.appendChild(iframe);
+    }
+    
+}
 
 
 function gameOver(){
@@ -150,8 +169,7 @@ function gameOver(){
 	$("#layer").hide();
 	clearTimeout(setTime);
 	var resultString = '';
-	var shareString = '';
-	var shareString1 = '';
+	var shareString = '我在三饭快炒小哥躲城管撑了' + lastStep +'格,不服来战';;
 	if (lastStep <= 15) {
 		resultString = '这么垃圾还好意思学人家摆摊，进去蹲几年吧！';
 	} else if (lastStep > 15 && lastStep <= 30) {
@@ -171,15 +189,23 @@ function gameOver(){
 	} else {
 		resultString = '你别跑呀，我不查你还不行吗！';
 	}
+	setTimeout(function(){
+			$("#share").show();
+
+		},1000);
 	$("#result1").html(resultString);
 	$('#num').html(lastStep);
 	resultBack = 1;
 	var peopleScream = $('#people_scream')[0];
 	peopleScream.play();
+	changeTitle(shareString);
 }
 
 function tryAgain() {
+	var defaultString = '三饭快炒小哥躲城管';
 	people.reset();
+	changeTitle(defaultString);
+	$("#share").hide();
 	$('#layer_btn_hide').removeClass('btn_hide_hover');
 	$('#layer_btn_run').removeClass('btn_run_hover');
 	time = 2000;
