@@ -3,6 +3,7 @@ $(document).ready(function(e){
 	background.init();
 	var windowW = $(window).width();
 	$("#wrapper_back").css({"width" : windowW + "px"});
+	$("#bgm")[0].play();
 });
 var speedPer = 100,
 	backSpeed = 1,
