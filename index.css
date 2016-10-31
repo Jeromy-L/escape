@@ -9,6 +9,9 @@ html, body {
   font-family: "宋体",Arial,Times;
   overflow: hidden; }
 
+#look {
+  display: none; }
+
 #wrapper {
   position: relative;
   margin: 0 auto;
