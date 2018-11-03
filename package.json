@@ -1,0 +1,23 @@
+{
+	"name": "escape",
+	"version": "1.0.0",
+	"description": "a JavaScript game",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "http-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Jeromy-L/escape.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Jeromy-L/escape/issues"
+	},
+	"homepage": "https://github.com/Jeromy-L/escape#readme",
+	"dependencies": {
+		"http-server": "^0.11.1"
+	}
+}
